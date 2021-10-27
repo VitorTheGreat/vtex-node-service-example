@@ -1,0 +1,35 @@
+{
+  "vendor": "VENDOR_NAME",
+  "name": "APP_NAME",
+  "version": "0.0.0",
+  "title": "TITLE HERE",
+  "description": "TELL ME SOMETHING",
+  "builders": {
+    "node": "4.x",
+    "docs": "0.x",
+    "graphql": "1.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vbase-read-write"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

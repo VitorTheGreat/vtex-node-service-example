@@ -1,0 +1,12 @@
+type Query {
+    getInfo(
+      categoryId: String
+      segment: String
+      session: String
+    ): [Product] @cacheControl(scope: PRIVATE)
+    getPersonalizations(
+      job_id: String
+      segment: String 
+      session: String
+    ): Personalization @cacheControl(scope: PRIVATE)
+}

@@ -1,0 +1,12 @@
+{
+  "stack": "nodejs",
+  "memory": 128,
+  "ttl": 60,
+  "timeout": 60,
+  "routes": {
+    "example": {
+      "path": "/v0/middleware",
+      "public": true
+    }
+  }
+}
